@@ -41,5 +41,14 @@ describe('SignUpComponent', () => {
     expect(label).toBeTruthy();
     expect(label?.textContent).toContain('E-mail');
   })
+   //Test que verifica se o formulário de registro contém um campo de entrada para o e-mal do usuário
+   it('has email input', () => {
+    const signUp = fixture.nativeElement as HTMLElement;
+    const label = signUp.querySelector('label[for="password"]')
+    const input = signUp.querySelector('input[id="password"]');
+    expect(input).toBeTruthy();
+    expect(label).toBeTruthy();
+    expect(label?.textContent).toContain('Password');
+  })
 })
 });
